@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".LoadingPassenger">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.AppBarOverlay"/>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:padding="15dp"
+            android:orientation="horizontal"
+            android:background="#384fad">
+
+
+            <LinearLayout
+                android:id="@+id/LinearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="620dp"
+                android:layout_weight="1"
+                android:background="#000b39"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/backBUT"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="474dp"
+                        android:layout_marginEnd="290dp"
+                        android:layout_marginBottom="86dp"
+                        android:layout_weight="1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="352dp"
+                        android:layout_height="141dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="92dp"
+                        app:layout_constraintBottom_toTopOf="@+id/txtLoading"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/mainlogo" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="167dp"
+                        android:layout_marginTop="33dp"
+                        android:layout_marginEnd="167dp"
+                        android:background="#00FA6C6C"
+                        app:layout_constraintBottom_toTopOf="@+id/backBUT"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtLoading" />
+
+                    <EditText
+                        android:id="@+id/txtLoading"
+                        android:layout_width="273dp"
+                        android:layout_height="107dp"
+                        android:layout_marginStart="75dp"
+                        android:layout_marginTop="100dp"
+                        android:layout_marginEnd="75dp"
+                        android:layout_marginBottom="32dp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:lines="3"
+                        android:text="Loading...  WIll Confirm In 30s"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold|italic"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <Button
+                        android:id="@+id/BUTcheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="55dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="79dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="Check For Update"
+                        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/backBUT"
+                        app:layout_constraintTop_toBottomOf="@+id/txtLoading" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
